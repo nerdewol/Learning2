@@ -10,22 +10,28 @@ namespace ConsoleApplication1
     {
         static void Main(string[] args)
         {
-         //string numbers = Console.ReadLine();
-        //string list = Console.ReadLine();
-        //int[] toSum = new int[] { int.Parse(list) };
+            Console.WriteLine("This is to hopefully skip the first line, just hit enter.");
+            Console.ReadLine();
+            char[] delimiterChars = { ' ' };
+            string list = Console.ReadLine();
+            string[] toSum = list.Split(delimiterChars);
 
-         int[] toSum = new int[] { 10, 20, 30, 40, 5, 6, 7, 8 };
             int sum = 0;
-          
-            
-          for (Int32 i = 0; i <= toSum.Length; i++)
-            {
-                Console.WriteLine(sum += toSum[i]);
-            }
 
+
+            for (Int32 i = 0; i < toSum.Length; i++)
+            {
+                
+                sum += int.Parse(toSum[i]);
+                
+            }
+            Console.WriteLine(sum);
+            
+
+
+            Console.ReadLine();
          
-         Console.ReadLine();
-         
+
          }
         
     }
